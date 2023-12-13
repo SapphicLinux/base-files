@@ -2,8 +2,6 @@
 
 apt install fakeroot
 
-whoami
-
 #./clean.sh
 
 apt source base-files/stable
