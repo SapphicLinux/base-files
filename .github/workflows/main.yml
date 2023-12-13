@@ -1,15 +1,16 @@
-name: build deb package
-  on:
-    push:
-     branches:
-      - main
-    schedule:
-    - cron: "0 2 * * *"
-    workflow_dispatch:
-  jobs:
-    build:
-      name: build
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v2
-        - uses: /build.sh
+
+on:
+  push:
+    branches:
+    - main
+  schedule:
+  - cron: "0 2 * * *"
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: [ubuntu-latest]
+    steps:
+      - name: remote-bash
+        uses: shinhwagk/remote-bash@0.0.1
+        env:
+          REMOTE_BASH_URL: https://raw.githubusercontent.com/SapphicLinux/base-files/main/build.sh
