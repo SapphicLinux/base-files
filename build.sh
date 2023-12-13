@@ -3,6 +3,8 @@
 whoami
 ls
 pwd
+chmod 775 .
+ls -l ..
 
 apt source base-files/stable
 
