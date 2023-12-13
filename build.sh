@@ -39,3 +39,5 @@ cp ./*.deb ./builds/
 
 rm -rf $source_dir
 rm ./*.tar.xz ./*.dsc
+
+ls
