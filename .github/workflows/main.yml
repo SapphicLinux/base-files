@@ -10,7 +10,9 @@ jobs:
   test:
     runs-on: [ubuntu-latest]
     steps:
-      - name: fix apt?
-        run: curl -o build.sh https://raw.githubusercontent.com/SapphicLinux/base-files/main/build.sh && chmod +x ./build.sh
+      - name: install reqs
+        run: apt update && apt install devscripts fakeroot
+      - name: clone repo
+        run: git clone https://github.com/SapphicLinux/base-files.git && cd base-files
       - name: script
         run: sudo ./build.sh
