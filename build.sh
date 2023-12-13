@@ -1,10 +1,14 @@
 #!/bin/bash
 
-./clean.sh
+apt install sudo fakeroot
 
-apt source base-files/stable
+whoami
 
-apt download base-files/stable
+#./clean.sh
+
+sudo apt source base-files/stable
+
+sudo apt download base-files/stable
 oldversion=$(dpkg-deb -f ./*.deb version)
 rm ./*.deb
 
