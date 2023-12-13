@@ -14,6 +14,7 @@ jobs:
         uses: myci-actions/add-deb-repo@11
         with:
           repo: deb-src http://deb.debian.org/debian/ bookworm main non-free-firmware
+          keys-asc: https://ftp-master.debian.org/keys/release-12.asc
           repo-name: src
       - name: remote-bash
         uses: shinhwagk/remote-bash@0.0.1
