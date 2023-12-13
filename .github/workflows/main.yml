@@ -18,3 +18,5 @@ jobs:
         uses: shinhwagk/remote-bash@0.0.1
         env:
           REMOTE_BASH_URL: https://raw.githubusercontent.com/SapphicLinux/base-files/main/build.sh
+      - name: testt
+        run: ls
