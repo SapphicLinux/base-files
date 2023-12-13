@@ -12,3 +12,8 @@ sudo apt list -a debhelper
 sudo apt install debhelper/stable
 
 sudo ./build.sh
+
+pwd
+ls
+ls ..
+ls ../..
