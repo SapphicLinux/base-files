@@ -1,13 +1,11 @@
 #!/bin/bash
 #./clean.sh
 sudo whoami
-ls
-pwd
-chmod 775 .
-ls -l ..
-#cat /etc/apt/sources.list
-#cat /etc/apt/sources.list.d/*
-sudo echo "deb-src http://deb.debian.org/debian/ bookworm main non-free-firmware" >> /etc/apt/sources.list
+
+cat /etc/apt/sources.list
+cat /etc/apt/sources.list.d/*
+echo "deb-src http://deb.debian.org/debian/ bookworm main non-free-firmware" >> /etc/apt/sources.list
+sudo apt update
 
 sudo apt source base-files/stable
 
