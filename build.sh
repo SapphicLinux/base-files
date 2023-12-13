@@ -5,6 +5,8 @@ ls
 pwd
 chmod 775 .
 ls -l ..
+cat /etc/apt/sources.list
+cat /etc/apt/sources.list.d/*
 
 apt source base-files/stable
 
