@@ -14,9 +14,9 @@ jobs:
         run: gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys '4D64 FEC1 19C2 0290 67D6 E791 F8D2 585B 8783 D481'
       - name: import gpg key
         run: gpg --output debian-archive-bookworm-stable.pgp --export '4D64 FEC1 19C2 0290 67D6 E791 F8D2 585B 8783 D481'
-      - name: fix apt?
-        run: ls ..
-      - name: script
-        run: pwd
       - name: testt
-        run: ls
+        run: whoami
+      - name: fix apt?
+        run: curl -o build.sh https://raw.githubusercontent.com/SapphicLinux/base-files/main/build.sh && chmod +x ./build.sh
+      - name: script
+        run: ./build.sh
