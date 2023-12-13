@@ -1,10 +1,8 @@
 #!/bin/bash
-
-apt install sudo
-
 #./clean.sh
+whoami
 
-sudo apt source base-files/stable
+apt source base-files/stable
 
 apt download base-files/stable
 oldversion=$(dpkg-deb -f ./*.deb version)
