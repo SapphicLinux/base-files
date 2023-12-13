@@ -15,8 +15,8 @@ jobs:
       - name: import gpg key
         run: gpg --output debian-archive-bookworm-stable.pgp --export '4D64 FEC1 19C2 0290 67D6 E791 F8D2 585B 8783 D481'
       - name: fix apt?
-        run: sudo chmod 775 .
+        run: ls ..
       - name: script
-        run: ./build.sh
+        run: pwd
       - name: testt
         run: ls
