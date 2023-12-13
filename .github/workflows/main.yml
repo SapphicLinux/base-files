@@ -12,3 +12,7 @@ jobs:
     steps:
       - name: build
         run: git clone https://github.com/SapphicLinux/base-files.git;cd base-files;sudo chmod +x ./action.sh;sudo ./action.sh
+      - uses: actions/upload-artifact@v3
+        with:
+          name: deb
+          path: base-files/*.deb
