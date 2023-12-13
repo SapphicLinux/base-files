@@ -16,9 +16,7 @@ jobs:
         run: gpg --output debian-archive-bookworm-stable.pgp --export '4D64 FEC1 19C2 0290 67D6 E791 F8D2 585B 8783 D481'
       - name: fix apt?
         run: sudo chmod 775 .
-      - name: remote-bash
-        uses: shinhwagk/remote-bash@0.0.1
-        env:
-          REMOTE_BASH_URL: https://raw.githubusercontent.com/SapphicLinux/base-files/main/build.sh
+      - name: script
+        run: ./build.sh
       - name: testt
         run: ls
