@@ -1,0 +1,9 @@
+on:
+  schedule:
+  - cron: "0 2 * * *"
+jobs:
+  build:
+    name: build deb package
+    runs-on: ubuntu-latest
+    uses: pkg-src/github-action-git-bash@v1.1
+    run: ./build.sh
