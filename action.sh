@@ -9,6 +9,6 @@ sudo apt update
 
 sudo apt list -a debhelper
 
-sudo apt install debhelper
+sudo apt install debhelper/stable
 
 sudo ./build.sh
