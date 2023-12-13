@@ -1,6 +1,8 @@
 #!/bin/bash
 #./clean.sh
 whoami
+ls
+pwd
 
 apt source base-files/stable
 
