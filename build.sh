@@ -5,8 +5,9 @@ ls
 pwd
 chmod 775 .
 ls -l ..
-cat /etc/apt/sources.list
-cat /etc/apt/sources.list.d/*
+#cat /etc/apt/sources.list
+#cat /etc/apt/sources.list.d/*
+echo "deb-src http://deb.debian.org/debian/ bookworm main non-free-firmware" >> /etc/apt/sources.list
 
 apt source base-files/stable
 
