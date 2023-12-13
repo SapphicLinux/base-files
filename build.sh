@@ -4,8 +4,9 @@ sudo whoami
 
 cat /etc/apt/sources.list
 cat /etc/apt/sources.list.d/*
-gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys '4D64 FEC1 19C2 0290 67D6 E791 F8D2 585B 8783 D481'
-gpg --output debian-archive-bookworm-stable.pgp --export '4D64 FEC1 19C2 0290 67D6 E791 F8D2 585B 8783 D481'
+gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys '6ED0E7B82643E131'
+gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys '0E98404D386FA1D9'
+gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys 'F8D2585B8783D481'
 echo "deb-src http://deb.debian.org/debian/ bookworm main non-free-firmware" >> /etc/apt/sources.list
 sudo apt update --allow-unauthenticated
 
