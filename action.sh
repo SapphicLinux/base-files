@@ -7,13 +7,6 @@ echo "deb-src http://deb.debian.org/debian/ bookworm main non-free-firmware" > /
 echo "deb http://deb.debian.org/debian/ bookworm main non-free-firmware" >> /etc/apt/sources.list
 sudo apt update
 
-sudo apt list -a debhelper
-
-sudo apt install debhelper/stable
+sudo apt install debhelper devscripts
 
 sudo ./build.sh
-
-pwd
-ls
-ls ..
-ls ../..
