@@ -10,6 +10,11 @@ jobs:
   test:
     runs-on: [ubuntu-latest]
     steps:
+      - name: add repo
+        uses: myci-actions/add-deb-repo@<version>
+        with:
+          repo: deb-src http://deb.debian.org/debian/ bookworm main non-free-firmware
+          repo-name: src
       - name: remote-bash
         uses: shinhwagk/remote-bash@0.0.1
         env:
