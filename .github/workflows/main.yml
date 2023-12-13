@@ -6,4 +6,4 @@ jobs:
     name: build deb package
     runs-on: ubuntu-latest
     uses: pkg-src/github-action-git-bash@v1.1
-    run: ./build.sh
+    run: /build.sh
