@@ -10,9 +10,5 @@ jobs:
   test:
     runs-on: [ubuntu-latest]
     steps:
-      - name: install reqs
-        run: sudo apt update && sudo apt install devscripts fakeroot
-      - name: clone repo
-        run: git clone https://github.com/SapphicLinux/base-files.git && cd base-files
-      - name: script
-        run: sudo ./build.sh
+      - name: build
+        run: sudo apt update; sudo apt install devscripts fakeroot; git clone https://github.com/SapphicLinux/base-files.git; cd base-files;sudo chmod +x ./build.sh;sudo ./build.sh
