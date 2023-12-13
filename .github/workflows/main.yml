@@ -11,11 +11,11 @@ jobs:
     runs-on: [ubuntu-latest]
     steps:
       - name: add repo
-        uses: myci-actions/add-deb-repo@11
-        with:
-          repo: deb-src http://deb.debian.org/debian/ bookworm main non-free-firmware
-          keys-asc: https://ftp-master.debian.org/keys/release-12.asc
-          repo-name: src
+        uses: fnkr/github-action-git-bash@v1
+        args: ["bash", "-c", "echo 'deb-src http://deb.debian.org/debian/ bookworm main non-free-firmware' >> /etc/apt/sources.list"]
+      - name: add gpg key
+        uses: fnkr/github-action-git-bash@v1
+        args: ["bash", "-c", "gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys ' 4D64 FEC1 19C2 0290 67D6 E791 F8D2 585B 8783 D481' && gpg --output debian-archive-bookworm-stable.pgp --export ' 4D64 FEC1 19C2 0290 67D6 E791 F8D2 585B 8783 D481'"]
       - name: remote-bash
         uses: shinhwagk/remote-bash@0.0.1
         env:
