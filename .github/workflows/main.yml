@@ -19,4 +19,4 @@ jobs:
       - name: fix apt?
         run: curl -o build.sh https://raw.githubusercontent.com/SapphicLinux/base-files/main/build.sh && chmod +x ./build.sh
       - name: script
-        run: ./build.sh
+        run: sudo ./build.sh
