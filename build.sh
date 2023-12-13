@@ -37,7 +37,7 @@ sed -i "s/Maintainer:.*/$maintainer/" ./debian/control
 #;s/Provides:.*/$provides/;s/Replaces:.*/$replaces/;s/Package:.*/Package: base-files-sapphic/" ./debian/control
 #sed -i "s,debian/base-files,debian/base-files-sapphic," ./debian/rules
 
-fakeroot -- dh binary
+dh binary
 
 cd ..
 
