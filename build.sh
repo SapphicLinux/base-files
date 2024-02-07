@@ -12,7 +12,7 @@ source_dir="./base-files-${oldversion}/"
 cd $source_dir
 
 export DEBEMAIL=penelope@pogmom.me
-debchange -D touko --stable -p --no-auto-nmu -U "system build"
+debchange -D touko --stable --force-distribution -p --no-auto-nmu -U "system build"
 
 let os_version=$(cat ./etc/debian_version | sed "s/\..*//")-11
 os_name="PRETTY_NAME=\"Sapphic #OSNAME# v$os_version\""
