@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo rm -r base-files*
+rm -r base-files*
